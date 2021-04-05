@@ -52,7 +52,7 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/ --ignore-pattern build/ --quiet",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint && react-scripts test",
+    "test": "npm run lint && react-scripts test --passWithNoTests",
     "test:cov": "npm test -- --coverage"
   },
   "eslintConfig": {
