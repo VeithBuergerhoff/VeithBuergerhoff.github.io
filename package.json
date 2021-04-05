@@ -48,7 +48,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/ --ignore-pattern build/ --quiet",
     "lint:fix": "npm run lint -- --fix",
     "test": "npm run lint && react-scripts test --passWithNoTests",
