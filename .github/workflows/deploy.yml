@@ -21,4 +21,4 @@ jobs:
           check-latest: true
       - run: npm ci
       - run: npm test
-      - run: npm deploy
+      - run: npm run deploy
