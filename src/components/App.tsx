@@ -4,7 +4,7 @@ import Copyright from "./Copyright";
 import Header from "./Header";
 
 export default class App extends React.Component {
-  render() {
+  render(): JSX.Element {
     return (
       <div>
         <Header />
