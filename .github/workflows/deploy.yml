@@ -1,4 +1,4 @@
-name: CI
+name: Build and Deploy
 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
@@ -21,4 +21,8 @@ jobs:
           check-latest: true
       - run: npm ci
       - run: npm test
-      - run: npm run deploy
+      - uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: build
+          token: ${{ secrets.DEPLOY_KEY }}
