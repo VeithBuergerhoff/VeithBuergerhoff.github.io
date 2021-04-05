@@ -1,7 +1,22 @@
 {
   "name": "portfolio-web",
   "version": "0.1.0",
-  "private": true,
+  "private": true, 
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": ["text"]
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -33,11 +48,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint */**/*.ts --quiet --fix"
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --ignore-pattern node_modules/ --ignore-pattern build/ --quiet",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && react-scripts test",
+    "test:cov": "npm test -- --coverage"
   },
   "eslintConfig": {
     "extends": [
