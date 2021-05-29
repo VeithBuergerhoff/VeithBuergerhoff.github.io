@@ -1,7 +1,7 @@
 {
   "name": "portfolio-web",
   "version": "0.1.0",
-  "private": true, 
+  "private": true,
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
@@ -15,7 +15,9 @@
         "statements": 90
       }
     },
-    "coverageReporters": ["text"]
+    "coverageReporters": [
+      "text"
+    ]
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
